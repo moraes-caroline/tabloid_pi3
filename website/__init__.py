@@ -18,22 +18,24 @@ def create_app():
     app.config['SECRET_KEY'] = 'grhteyeuwhhs fgdhjajakuww'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
  #Postgres
-    app.config['SQLALCHEMY_DATABASE_URI']=f'postgresql://{USER}:{PASSWORD}@{HOST}:5432/{DB_POSTGRES}'
+ #   app.config['SQLALCHEMY_DATABASE_URI']=f'postgresql://{USER}:{PASSWORD}@{HOST}:5432/{DB_POSTGRES}'
     db.init_app(app)
 
 
 
     from .views import views
     from .auth import auth
-    from .api import api
+    from .api.usuarios import api
+    from  .api.produtos import api
     
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
     app.register_blueprint(api, url_prefix='/' )
     
+    
 
-    from .models import User, Note, Items
+    from .models import User, Comercios_items, Estabelecimentos, Servicos, Segmentos
     create_database(app)
 
     login_manager = LoginManager()

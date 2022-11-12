@@ -10,6 +10,10 @@
     pip install psycopg2-binary
 
 
+##Banco de dados MYSQL
+    pip install mysql-connector-python
+
+
 ## Instruções básicas para usar o git e github ##
 
 (comandos via terminal)

@@ -12,8 +12,8 @@
     <div class="form-row">
         <div class="form-group">
             <div class="col-md-6 ">
-                <label for="mercado">Estabelecimento: {{ mercado.nome }}</label>
-            <input type="hidden" id="estabelecimento_id" name="estabelecimento_id" value="{{ mercado.id }}">
+                <label for="mercado">Estabelecimento:<h5>{{ dono.nome_empresa }}</h5></label>
+            <input type="hidden" id="user_fk" name="user_fk" value="{{ dono.id }}">
 
                 
 
@@ -24,7 +24,7 @@
         <div class="form-group">
             <div class="col-md-6 ">
                 <label for="tipo_item">Tipo do produto:</label>
-                <select class="form-select" name="tipo_item" id="tipo_item" aria-label="Default select example">
+                <select class="form-select" name="tipo" id="tipo" aria-label="Default select example">
                     <option value="">Selecione o tipo do produto</option>
                     <option value="Açougue">Açougue</option>
                     <option value="Frios e laticinios">Frios e laticínios</option>
@@ -41,45 +41,39 @@
     </div>
     <div class="form-group">
         <div class="col-md-6 ">
-      <label for="nome_item">Nome do produto:</label>
-      <input type="nome_item" class="form-control" id="nome_item" name="nome_item" placeholder="escreva o nome do produto">
+      <label for="nome">Nome do produto:</label>
+      <input type="nome" class="form-control" id="nome" name="nome" placeholder="Digite o nome do produto">
         </div>
     </div>
 
 
     <div class="form-group">
         <div class="col-md-6 ">
-            <label for="marca_item">Marca:</label>
-            <input type="marca_item" class="form-control" id="marca_item" name="marca_item" placeholder="escreva o nome da marca">
+            <label for="marca">Marca:</label>
+            <input type="marca" class="form-control" id="marca" name="marca" placeholder="Digite o nome da marca do item">
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-6 ">
-            <label for="volume_tipo">Peso:</label>
-            <input type="volume_tipo" class="form-control" id="volume_tipo" name="volume_tipo" placeholder="escreva a quantidade">
+            <label for="volume">Quantidade:</label>
+            <input type="volume" class="form-control" id="volume" name="volume" placeholder="Digite a Quantidade de itens">
 
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-6 ">
-        <label for="volume">Quantidade:</label>
-        <input type="volume" class="form-control" id="volume" name="volume" placeholder="escreva a quantidade">
+        <label for="peso">peso/tamanho:</label>
+        <input type="peso" class="form-control" id="peso" name="peso" placeholder="Digite o peso ou metragem">
         </div>
     </div>
 
-    <div class="form-group">
-        <div class="col-md-6 ">
-        <label for="qtd_maxima">Qtde máxima:</label>
-        <input type="qtd_maxima" class="form-control" id="qtd_maxima" name="qtd_maxima" placeholder="escreva a quantidade">
-        </div>
-    </div>
 
     <div class="form-group">
         <div class="col-md-6 ">
             <label for="valor">Valor:</label>
-            <input type="valor" class="form-control" id="valor" name="valor" placeholder="escreva o valor do produto">
+            <input type="valor" class="form-control" id="valor" name="valor" placeholder="Digite o valor do produto">
 
         </div>
     </div>
@@ -87,15 +81,15 @@
     <div class="form-group">
         <div class="col-md-6 ">
 
-            <label for="data-final-promo">Arquivo:</label>
+            <label for="foto">Arquivo:</label>
             <input id="foto" type="file" class="form-control"  name="foto">
         </div>
         </div>
 
     <div class="form-group">
         <div class="col-md-6 ">
-            <label for="data_fim_promocao">final da promoção:</label>
-            <input id="data_fim_promocao" type="data_fim_promocao" class="form-control" name="data_fim_promocao">
+            <label for="data_fim_promocao">Fim da promoção:</label>
+            <input id="fim_promo" type="fim_promo" class="form-control" name="fim_promo" placeholder="digite a validade da promoção">
         </div>
     </div>
 </div>
